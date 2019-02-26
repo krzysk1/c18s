@@ -176,9 +176,14 @@
                 <[uint32][Type][1]>
             >
 
-
             // Gears
-
+			
+            <[rigidbody][LeftGear][]
+                <[float64][Mass][28]>
+                <[tmvector3d][InertiaLength][ 0.5 0.3 1.78267 ]>
+                <[tmvector3d][R0][ 2.92109 1.98529 -1.137335 ]>
+                <[tmmatrix3d][B0][ 1.0 -0.0 -0.0  0.0 1.0 -0.0  0.0 0.0 1.0]>
+            >
             <[jointlinear][JointFuselageLeftGear][]
                 <[tmvector3d][R0][ 2.90833 1.98529 -0.55011 ]>
                 <[float64][Kfx][27200000]>
@@ -2390,11 +2395,18 @@
                 <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][3.5636 -0.01428 0.0988]>
             >
+			// clock
+            <[graphics_input][LocalTime][]
+                <[uint32][InputID][LocalTime.Output]>
+            >
+            <[graphics_sec_to_hms][Watch][]
+                <[string8][Input][LocalTime.Output]>
+            >			
             <[hingedbodygraphics][clock_SecondHand_3][]
                 <[string8][GeometryList][ secondhand ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][Watch.Seconds60]>
                 <[float64][AngleMax][0.10472]>
                 <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][3.5516 0.041 0.04892]>
@@ -2403,7 +2415,7 @@
                 <[string8][GeometryList][ minutehand ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.001745]>
                 <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][3.5516 0.041 0.04892]>
@@ -2412,7 +2424,7 @@
                 <[string8][GeometryList][ hourhand ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.000145]>
                 <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][3.5516 0.041 0.04892]>
