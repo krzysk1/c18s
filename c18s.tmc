@@ -4,7 +4,7 @@
         <[vec32array][ContactSpheres][ (2.9211 1.9853 -1.9887 0.04) (2.9211 -1.9853 -1.9887 0.04) (-4.0991 0 -0.4445 0.04) ]>
 		<[string8][DisplayName][Beechcraft C18S]>
 		<[string8][DescriptionTextEN][The Beechcraft Model 18 (or "Twin Beech", as it is also known) is a six to 11-seat, twin-engined, low-wing, tailwheel light aircraft manufactured by the Beech Aircraft Corporation of Wichita, Kansas. Continuously produced from 1937 to November 1969, (over 32 years, the world record at the time), over 9,000 were produced, making it one of the world's most widely used light aircraft. Sold worldwide as a civilian executive, utility, cargo aircraft, and passenger airliner on tailwheels, nosewheels, skis or floats, it was also used as a military aircraft. 
-		Converted from FlightGear by Krzysztof Kaniewski. 3D model by BARANGER Emmanuel.]>
+		Converted from FlightGear by Krzysztof Kaniewski. Original 3D model made by BARANGER Emmanuel.]>
 		<[float64][WingSpan][14.5]>
 		<[float64][Mass][2800.9]>
 		<[float64][MaximumSpeed][111.5]>
@@ -14,17 +14,17 @@
 		<[tmvector2d][NormalSpeedRange][ 37.5 89.0 ]>
 		<[tmvector2d][CautionSpeedRange][ 89.0 111.5 ]>
 		<[tmvector2d][FlapSpeedRange][ 33.5 52.0 ]>
-        <[float64][MaximumAltitude][4715.0]>
-        <[float64][CruiseAltitude] [1826.0]>
-        <[float64][QSpan][8.74]>
-        <[float64][QMass][1000.0]>
-        <[float64][QSpeed][86.0]>
-        <[float64][QPower][118000.0]>
+        <[float64][MaximumAltitude][7930.0]>
+        <[float64][CruiseAltitude] [2826.0]>
+        <[float64][QSpan][14.5]>
+        <[float64][QMass][3959.0]>
+        <[float64][QSpeed][97.5]>
+        <[float64][QPower][672000.0]>
         <[float64][QThrust][0.0]>
-        <[float64][QRange][1085000.0]>
+        <[float64][QRange][1900000.0]>
         <[float64][QRatio][0.0]>
-        <[float64][QBuild][1300]>
-        <[float64][QVirgin][1972]>
+        <[float64][QBuild][9000]>
+        <[float64][QVirgin][1937]>
 		<[bool][Airplane][true]>
 		<[bool][Flaps][true]>
 		<[bool][Retracts][true]>
