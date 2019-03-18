@@ -217,12 +217,12 @@
             <[oleo_pneumatic_damper][LeftGearDamper][]
                 <[string8][Body0][LeftGearUpper]>
                 <[string8][Body1][LeftGear]>
-                <[tmvector3d][R0][ -0.48866 1.985 -0.59731 ]>
-                <[tmvector3d][R1][ -0.37901 1.985 -1.30912 ]>
+                <[tmvector3d][R0][ 2.90833 1.985 -0.59731 ]>
+                <[tmvector3d][R1][ 2.90833 1.985 -1.30912 ]>
                 <[float64][LimitLengthMin][0.58]>
                 <[float64][LimitLengthMax][0.73]>
                 <[float64][LimitSpring][4500000]>
-                <[float64][LimitDamping][48600]>
+                <[float64][LimitDamping][148600]>
                 <[float64][ForceExtended][1500]>
                 <[float64][ForceCompressed][45000]>
                 <[float64][DampingExtended][20600]>
@@ -263,12 +263,12 @@
             <[oleo_pneumatic_damper][RightGearDamper][]
                 <[string8][Body0][RightGearUpper]>
                 <[string8][Body1][RightGear]>
-                <[tmvector3d][R0][ -0.48866 -1.985 -0.59731 ]>
-                <[tmvector3d][R1][ -0.37901 -1.985 -1.30912 ]>
+                <[tmvector3d][R0][ 2.90833 -1.985 -0.59731 ]>
+                <[tmvector3d][R1][ 2.90833 -1.985 -1.30912 ]>
                 <[float64][LimitLengthMin][0.58]>
                 <[float64][LimitLengthMax][0.73]>
                 <[float64][LimitSpring][4500000]>
-                <[float64][LimitDamping][48600]>
+                <[float64][LimitDamping][148600]>
                 <[float64][ForceExtended][1500]>
                 <[float64][ForceCompressed][45000]>
                 <[float64][DampingExtended][20600]>
@@ -602,7 +602,6 @@
                 <[float64][GroundEffectFactor][1.0]>
                 <[float64][GroundEffectScale][1.0]>
             >
-
 
             // Aerofuselage
             <[aerofuselage][FuselageAero][]
@@ -1238,7 +1237,7 @@
             >
             <[rigidbody][LeftPropellerBody][]
                 <[float64][Mass][14.5]>
-                <[tmvector3d][InertiaLength][ 0.2000 2.54 0.2000 ]>
+                <[tmvector3d][InertiaLength][ 0.2 2.54 0.2 ]>
                 <[tmvector3d][R0][4.33444 1.9993 -0.55305]>
                 <[tmmatrix3d][B0][1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0]>
             >
@@ -1253,8 +1252,8 @@
                 <[float64][InitialVelocity][72.0]>
             >
             <[airfoil][AirfoilPropeller][]
-                <[float64][Cl0][0.470000]>
-                <[float64][Cd0][0.009080]>
+                <[float64][Cl0][0.47]>
+                <[float64][Cd0][0.00908]>
                 <[float64][Cm0][-0.07]>
                 <[float64][ClAlpha][6.28]>
                 <[float64][CdAlpha][0.3]>
@@ -1296,7 +1295,7 @@
             >
             <[collisionblade][CollisionLeftPropeller][]
                 <[string8][Body][LeftPropellerBody]>
-                <[string8][Geometry][propdiscd]>
+                <[string8][Geometry][propdiscg]>
                 <[string8][DamageOnCrash][LeftPropeller.Damage]>
             >
             <[jointtorque][LeftDriveShaft][]
@@ -1320,7 +1319,7 @@
             >
             <[rigidbody][RightPropellerBody][]
                 <[float64][Mass][14.5]>
-                <[tmvector3d][InertiaLength][ 0.2000 2.54 0.2 ]>
+                <[tmvector3d][InertiaLength][ 0.2 2.54 0.2 ]>
                 <[tmvector3d][R0][4.33444 -1.9993 -0.55305]>
                 <[tmmatrix3d][B0][1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0]>
             >
@@ -1362,7 +1361,7 @@
             >
             <[collisionblade][CollisionRightPropeller][]
                 <[string8][Body][RightPropellerBody]>
-                <[string8][Geometry][propdiscg]>
+                <[string8][Geometry][propdiscd]>
                 <[string8][DamageOnCrash][RightPropeller.Damage]>
             >
             <[jointtorque][RightDriveShaft][]
@@ -1606,8 +1605,7 @@
                 <[string8][GeometryList][ ailesd echappesd moteursd trousd bloc_5 r-985_echappesd  bougies_5 caches_3369 cames_8068 ecrous_11989 pistons_20560 souflets_54812 tuyaux_66655 ]>
                 <[uint32][PositionID][RightWing.R]>
                 <[uint32][OrientationID][RightWing.Q]>
-            >
-			
+            >			
 			// strobe lights
             <[graphics_input][UniversalTime][]
                 <[uint32][InputID][UniversalTime.Output]>
@@ -1647,8 +1645,7 @@
                 <[float64][ConeCenter][0.0]>
                 <[float64][ConeCutoff][-0.5]>
                 <[float64][Brightness][10.0]>
-            >
-			
+            >		
 			// beacon light
             <[graphics_flasher][BeaconFlasher][]
                 <[string8][Function][Triangle]>
@@ -1674,8 +1671,7 @@
                 <[string8][InputModulation][BeaconSwitched.Output]>
                 <[float64][Size][0.04]>
                 <[float64][Brightness][4.0]>
-            >
-			
+            >			
             // navigation lights
             <[graphics_input][NavigationLightOn][]
                 <[uint32][InputID][NavigationLightOn.Output]>
@@ -1698,7 +1694,6 @@
                 <[float64][Brightness][ 2.0 ]>
                 <[string8][InputModulation][NavigationLightOn.Output]>					
             >			
-
 			// propellers
             <[propellergraphics][HeliceCompleteGauche_7][]
                 <[string8][GeometryList][ propdiscg ]>
