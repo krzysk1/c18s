@@ -4,7 +4,7 @@
 	// Plane: Beechcraft-C18S
 	// Original 3D model by BARANGER Emmanuel (3D/FDM) Version: 0.1 Alpha
 	// Compilation: by krzysk(at)wp.pl
-	// Date: Thu Jan 21 2016; Feb 2019
+	// Date: Thu Jan 21 2016; Mar 2019
 	//-------------------------------------
 	
     <[modelmanager][][]
@@ -1715,7 +1715,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][LeftPropeller.RotationAngle]>
-                <[tmvector3d][Axis][-1 0 0]>
+                <[tmvector3d][Axis][1 0 0]>
                 <[tmvector3d][Pivot][4.33444 1.9993 -0.55305]>
             >
             <[graphics_propeller_blade][HeliceCompleteGauche_7Blade0][]
@@ -1725,7 +1725,7 @@
                 <[uint32][AngleID][LeftPropeller.RotationAngle]>
                 <[uint32][RotationSpeedID][LeftPropeller.RotationSpeed]>
                 <[uint32][DamageID][LeftPropeller.Damaged]>
-                <[tmvector3d][Axis][1 0 0]>
+                <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][4.33444 1.9993 -0.55305]>
                 <[float64][Radius][1.249]>
                 <[string8][InputPitch][0.0]>
@@ -1737,7 +1737,7 @@
                 <[uint32][AngleID][LeftPropeller.RotationAngle]>
                 <[uint32][RotationSpeedID][LeftPropeller.RotationSpeed]>
                 <[uint32][DamageID][LeftPropeller.Damaged]>
-                <[tmvector3d][Axis][1 0 0]>
+                <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][4.33444 1.9993 -0.55305]>
                 <[float64][Radius][1.249]>
                 <[string8][InputPitch][0.0]>
@@ -1762,7 +1762,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][RightPropeller.RotationAngle]>
-                <[tmvector3d][Axis][-1 0 0]>
+                <[tmvector3d][Axis][1 0 0]>
                 <[tmvector3d][Pivot][4.33444 -1.9993 -0.55305]>
             >
             <[graphics_propeller_blade][HeliceCompleteDroite_12Blade0][]
@@ -1772,7 +1772,7 @@
                 <[uint32][AngleID][RightPropeller.RotationAngle]>
                 <[uint32][RotationSpeedID][RightPropeller.RotationSpeed]>
                 <[uint32][DamageID][RightPropeller.Damaged]>
-                <[tmvector3d][Axis][1 0 0]>
+                <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][4.33444 -1.9993 -0.55305]>
                 <[float64][Radius][1.249]>
                 <[string8][InputPitch][0.0]>
@@ -1784,7 +1784,7 @@
                 <[uint32][AngleID][RightPropeller.RotationAngle]>
                 <[uint32][RotationSpeedID][RightPropeller.RotationSpeed]>
                 <[uint32][DamageID][RightPropeller.Damaged]>
-                <[tmvector3d][Axis][1 0 0]>
+                <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][4.33444 -1.9993 -0.55305]>
                 <[float64][Radius][1.249]>
                 <[string8][InputPitch][0.0]>
