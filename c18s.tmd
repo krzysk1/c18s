@@ -329,22 +329,22 @@
                 <[string8][Body][TailGear]>
                 <[tmvector3d][R0][-4.104 0 -0.3538]>
             >
-            <[output][GroundRollSpeedLeftWheel][]
+            <[output][GroundRollSpeedLeft][]
                 <[string8][Input][LeftWheelHull.Speed]>
             >
-            <[output][GroundRollLoadLeftWheel][]
+            <[output][GroundRollLoadLeft][]
                 <[string8][Input][LeftWheelHull.Load]>
             >
-            <[output][GroundRollSpeedRightWheel][]
+            <[output][GroundRollSpeedRight][]
                 <[string8][Input][RightWheelHull.Speed]>
             >
-            <[output][GroundRollLoadRightWheel][]
+            <[output][GroundRollLoadRight][]
                 <[string8][Input][RightWheelHull.Load]>
             >
-            <[output][GroundRollSpeedTailWheel][]
+            <[output][GroundRollSpeedTail][]
                 <[string8][Input][TailWheelHull.Speed]>
             >
-            <[output][GroundRollLoadTailWheel][]
+            <[output][GroundRollLoadTail][]
                 <[string8][Input][TailWheelHull.Load]>
             >			
             <[airbrake][LeftGearAirbrake][]
@@ -883,9 +883,38 @@
                 <[uint][Positions][3]>
                 <[float64][Value][0.0]>					
             >
+            <[gated_lever][FlapLever][]
+                <[string8][Input][FlapsInput.Output]>
+                <[float64][Gates][ 0.0 0.50 1.0 ]>
+                <[float64][CommandMoveAcceleration][20.0]>
+                <[float64][CommandMoveStrength]    [8.0]>
+            >			
+            <[output_free][FlapLeverOutput][]
+                <[string8][Input][FlapLever.Output]>
+            >			
+            <[event_sound][FlapLeverPullSound][]
+            >
+            <[event_sound][FlapLeverReleaseSound][]
+            >
+            <[event_edge][FlapLever_UnlockedSound][]
+                <[string8][Input][FlapLever.OutputUnlocked]>
+                <[string8][Events][ FlapLeverPullSound.Trigger ]>
+                <[bool][Rising][true]>
+                <[bool][Falling][false]>
+                <[float64][Value][0.0]>
+                <[float64][Threshold][0.97]>
+            >
+            <[event_edge][FlapLever_ReleaseSound][]
+                <[string8][Input][FlapLever.OutputUnlocked]>
+                <[string8][Events][ FlapLeverReleaseSound.Trigger ]>
+                <[bool][Rising][false]>
+                <[bool][Falling][true]>
+                <[float64][Value][0.0]>
+                <[float64][Threshold][0.1]>
+            >			
             <[linear_interpolation][FlapsMapping][]
                 <[string8][Input][FlapsInput.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (0.5 0.349) (1.0 0.698132) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (0.5 0.349) (1.0 0.698) ]>
             >
             <[sender][SenderFlapPosition][]
                 <[string8][Input][FlapsMapping.Output]>
@@ -897,7 +926,7 @@
                 <[string8][Message][Aircraft.Flaps]>
             >
             <[sender][SenderFlapMaximum][]
-                <[string8][Input][0.698132]>
+                <[string8][Input][0.698]>
                 <[string8][Message][Aircraft.Flaps]>
                 <[string8][Qualifiers][maximum]>
             >
@@ -1078,9 +1107,9 @@
             <[servolinear][ServoPropSpeed1][]
                 <[string8][Input][PropSpeedInput1.Output]>
                 <[float64][OutputSpeed][169]>
-                <[float64][Position][283.5]>
+                <[float64][Position][230]>
                 <[float64array][InputPosition][ 0.0 1.0 ]>
-                <[float64array][OutputPosition][ 115 283.5 ]>
+                <[float64array][OutputPosition][ 115 230 ]>
             >
             <[output_free][ServoPropSpeed1Output][]
                 <[string8][Input][ServoPropSpeed1.Output]>
@@ -1096,9 +1125,9 @@
             <[servolinear][ServoPropSpeed2][]
                 <[string8][Input][PropSpeedInput2.Output]>
                 <[float64][OutputSpeed][169]>
-                <[float64][Position][283.5]>
+                <[float64][Position][230]>
                 <[float64array][InputPosition][ 0.0 1.0 ]>
-                <[float64array][OutputPosition][ 115 283.5 ]>
+                <[float64array][OutputPosition][ 115 230 ]>
             >
             <[output_free][ServoPropSpeed2Output][]
                 <[string8][Input][ServoPropSpeed2.Output]>
@@ -1239,8 +1268,8 @@
             <[governor][LeftGovernor][]
                 <[string8][RotationSpeed][LeftDriveShaft.GetRotationSpeed]>
                 <[string8][SpeedControl][ServoPropSpeed1.Output]>
-                <[float64][PitchMinimum][0.15]>
-                <[float64][PitchMaximum][1.4]>
+                <[float64][PitchMinimum][0.25]>
+                <[float64][PitchMaximum][1.5]>
             >
             <[output][LeftGovernorPitch][]
                 <[string8][Input][LeftGovernor.Output]>
@@ -1324,8 +1353,8 @@
             <[governor][RightGovernor][]
                 <[string8][RotationSpeed][RightDriveShaft.GetRotationSpeed]>
                 <[string8][SpeedControl][ServoPropSpeed2.Output]>
-                <[float64][PitchMinimum][0.15]>
-                <[float64][PitchMaximum][1.4]>
+                <[float64][PitchMinimum][0.25]>
+                <[float64][PitchMaximum][1.5]>
             >
             <[output][RightGovernorPitch][]
                 <[string8][Input][RightGovernor.Output]>
@@ -2841,11 +2870,11 @@
             >
             <[soundmapping][FlightVolume][]
                 <[string8][Input][Airspeed.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (10.0 0.0) (15.0 0.5) (100.0 1.5) (200.0 2.0) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (10.0 0.0) (15.0 0.5) (100.0 1.0) (200.0 1.2) ]>
             >
             <[soundmapping][FlightPitch][]
                 <[string8][Input][Airspeed.Output]>
-                <[tmvector2d][Map][ (0.0 0.80) ( 33.33 1.6 ) (200.0 5.2) ]>
+                <[tmvector2d][Map][ (0.0 0.80) (33.33 1.6) (200.0 5.2) ]>
             >
             <[soundloop][FlightVolumeLoop][]
                 <[string8][InputVolume][FlightVolume.Output]>
@@ -2888,7 +2917,7 @@
             >
             <[soundmapping][RPMVolumeWind][]
                 <[string8][Input][RotationSpeed.Output]>
-                <[tmvector2d][Map][ (0.00 0.0) (100.00 1.00) (125.79 1.5) (366.88 3.0) ]>
+                <[tmvector2d][Map][ (0.00 0.0) (100.00 1.00) (125.79 1.2) (366.88 2.0) ]>
             >
             <[soundloop][RPMWindLoop][]
                 <[string8][InputVolume][RPMVolumeWind.Output]>
@@ -2904,7 +2933,7 @@
             >
             <[soundmapping][RPMVolumeWind2][]
                 <[string8][Input][RotationSpeed2.Output]>
-                <[tmvector2d][Map][ (0.00 0.0) (100.00 1.00) (125.79 1.5) (366.88 3.0) ]>
+                <[tmvector2d][Map][ (0.00 0.0) (100.00 1.00) (125.79 1.2) (366.88 2.0) ]>
             >
             <[soundloop][RPMWindLoop2][]
                 <[string8][InputVolume][RPMVolumeWind2.Output]>
@@ -2993,7 +3022,7 @@
             >
             <[soundmapping][RPMVolumeRun][]
                 <[string8][Input][RotationSpeed.Output]>
-                <[tmvector2d][Map][ (0.00 0.0) (0.40 0.25) (100.00 0.30) (125.79 2.5) (366.88 3.0) ]>
+                <[tmvector2d][Map][ (0.00 0.0) (0.40 0.25) (100.00 0.30) (125.79 1.5) (366.88 2.0) ]>
             >
             <[soundloop][RPMIdleLoop][]
                 <[string8][InputVolume][RPMVolumeIdle.Output]>
@@ -3035,7 +3064,7 @@
             >
             <[soundmapping][RPMVolumeRun2][]
                 <[string8][Input][RotationSpeed2.Output]>
-                <[tmvector2d][Map][ (0.00 0.0) (0.40 0.25) (100.00 0.30) (125.79 2.5) (366.88 3.0) ]>
+                <[tmvector2d][Map][ (0.00 0.0) (0.40 0.25) (100.00 0.30) (125.79 1.5) (366.88 2.0) ]>
             >
             <[soundloop][RPMIdleLoop2][]
                 <[string8][InputVolume][RPMVolumeIdle2.Output]>
@@ -3082,39 +3111,39 @@
             >
             <[soundmapping][GroundRollFactorTail][]
                 <[string8][Input][GroundRollLoadTail.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (100.0 1.0 ) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (100.0 1.0) ]>
             >
             <[soundmapping][GroundRollFactorLeft][]
                 <[string8][Input][GroundRollLoadLeft.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (1000.0 1.0 ) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (1000.0 1.0) ]>
             >
             <[soundmapping][GroundRollFactorRight][]
                 <[string8][Input][GroundRollLoadRight.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (1000.0 1.0 ) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (1000.0 1.0) ]>
             >
             <[soundmapping][GroundRollFactorTail1][]
                 <[string8][Input][GroundRollSpeedTail.Output]>
-                <[tmvector2d][Map][ (-20.0 0.1) (0.0 0.0) (20.0 0.1 ) ]>
+                <[tmvector2d][Map][ (-20.0 0.1) (0.0 0.0) (20.0 0.1) ]>
             >
             <[soundmapping][GroundRollFactorLeft1][]
                 <[string8][Input][GroundRollSpeedLeft.Output]>
-                <[tmvector2d][Map][ (-20.0 1.0) (0.0 0.0) (20.0 1.0 ) ]>
+                <[tmvector2d][Map][ (-20.0 1.0) (0.0 0.0) (20.0 1.0) ]>
             >
             <[soundmapping][GroundRollFactorRight1][]
                 <[string8][Input][GroundRollSpeedRight.Output]>
-                <[tmvector2d][Map][ (-20.0 1.0) (0.0 0.0) (20.0 1.0 ) ]>
+                <[tmvector2d][Map][ (-20.0 1.0) (0.0 0.0) (20.0 1.0) ]>
             >
             <[soundmapping][GroundRollPitchTail][]
                 <[string8][Input][GroundRollSpeedTail.Output]>
-                <[tmvector2d][Map][ (-50.0 1.0) (0.0 0.5) (50.0 1.0 ) ]>
+                <[tmvector2d][Map][ (-50.0 1.0) (0.0 0.5) (50.0 1.0) ]>
             >
             <[soundmapping][GroundRollPitchLeft][]
                 <[string8][Input][GroundRollSpeedLeft.Output]>
-                <[tmvector2d][Map][ (-50.0 1.1) (0.0 0.5) (50.0 1.1 ) ]>
+                <[tmvector2d][Map][ (-50.0 1.1) (0.0 0.5) (50.0 1.1) ]>
             >
             <[soundmapping][GroundRollPitchRight][]
                 <[string8][Input][GroundRollSpeedRight.Output]>
-                <[tmvector2d][Map][ (-50.0 0.9) (0.0 0.5) (50.0 0.9 ) ]>
+                <[tmvector2d][Map][ (-50.0 0.9) (0.0 0.5) (50.0 0.9) ]>
             >
             <[soundmultiply][GroundRollVolumeTail][]
                 <[string8][Input0][GroundRollFactorTail.Output]>
@@ -3150,6 +3179,20 @@
                 <[string8][SoundFile][rumble.wav]>
             >
 			
+			// gear lever
+            <[soundinput][GearLeverSound][]
+                <[uint32][InputID][GearLeverSound.Output]>
+            >
+            <[sound_multi][SoundGear][]
+                <[uint32][PositionID][Fuselage.R]>0
+                <[uint32][VelocityID][Fuselage.V]>
+                <[string8][InputTrigger][GearLeverSound.Output]>
+                <[string8][InputVolume][2.0]>
+                <[string8][InputPitch][1.0]>
+                <[string8][SoundFile][gear.wav]>
+                <[bool][External][false]>
+            >
+			
             // flap lever
             <[soundinput][FlapLeverPullSound][]
                 <[string8][InputID][FlapLeverPullSound.Output]>
@@ -3158,7 +3201,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][InputTrigger][FlapLeverPullSound.Output]>
-                <[string8][InputVolume] [0.01]>
+                <[string8][InputVolume] [0.8]>
                 <[string8][InputPitch]  [0.6]>
                 <[string8][SoundFile][flaps.wav]>
                 <[bool][External][false]>
@@ -3170,7 +3213,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][InputTrigger][FlapLeverReleaseSound.Output]>
-                <[string8][InputVolume] [0.4]>
+                <[string8][InputVolume] [1.0]>
                 <[string8][InputPitch]  [1.2]>
                 <[string8][SoundFile][flaps.wav]>
                 <[bool][External][false]>

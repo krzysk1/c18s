@@ -13,11 +13,8 @@ Installation
 
 1. Unzip file and move the folder "beechcraft-c18s" to C:\Users\~\Documents\Aerofly FS2\aircraft.
 
-
-Tips:
-
-Use AirBrake button to turn off/on engines.
-
 There is extra livery in 'liveries/Sarda' folder. This Beechcraft 18 (ex-USAAF) of Italian 'Alisarda' operated during 1964 from Olbia's airport  (Sardinia, Italy).
 
 Repaint kit and other resources are available here: https://github.com/FGMEMBERS/Beechcraft-C18S
+
+Aircraft Technical Data & Specifications: http://www.airliners.net/aircraft-data/beech-18/61
