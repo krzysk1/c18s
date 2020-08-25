@@ -1488,6 +1488,9 @@
                 <[float64][Radius][0.08]>
                 <[float64][Limit][0.02]>
             >
+            <[output][BalanceIndicatorDeflection][]
+                <[string8][Input][BalanceIndicator.Output]>
+            >			
             <[clock][Clock][]
             >
             <[output][UniversalTime][]
@@ -2244,9 +2247,14 @@
                 <[tmvector3d][Axis][-1 0 0]>
                 <[tmvector3d][Pivot][3.5596 0.278 0.08392]>
             >
-            <[rigidbodygraphics][BalanceIndicatorBall][]
+            <[hingedbodygraphics][BalanceIndicatorBall][]
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][GeometryList][ Ball ]>
-                <[uint32][PositionID][BalanceIndicatorBall.R]>
+                <[tmvector3d][Axis][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Pivot][ 3.563 0.278 0.37040 ]>
+                <[float64][AngleMax][0.17]>
+                <[string8][AngleID][BalanceIndicatorDeflection.Output]>
             >
             <[hingedbodygraphics][alt_Needle1_3][]
                 <[string8][GeometryList][ Needle1 ]>
