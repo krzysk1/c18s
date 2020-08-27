@@ -2252,8 +2252,8 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][GeometryList][ Ball ]>
                 <[tmvector3d][Axis][ -1.0 0.0 0.0 ]>
-                <[tmvector3d][Pivot][ 3.563 0.278 0.37040 ]>
-                <[float64][AngleMax][0.17]>
+                <[tmvector3d][Pivot][ 3.563 0.278 0.13 ]>
+                <[float64][AngleMax][0.32]>
                 <[string8][AngleID][BalanceIndicatorDeflection.Output]>
             >
             <[hingedbodygraphics][alt_Needle1_3][]
