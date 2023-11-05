@@ -14,7 +14,7 @@ Installation
 
 1. Unzip file and move the folder "c18s" to C:\Users\~\Documents\Aerofly FS4\aircraft.
 
-There is extra livery in 'liveries/Sarda' folder. This Beechcraft 18 (ex-USAAF) of Italian 'Alisarda' operated during 1964 from Olbia's airport  (Sardinia, Italy).
+There is extra livery in 'sarda' folder. This Beechcraft 18 (ex-USAAF) of Italian 'Alisarda' operated during 1964 from Olbia's airport  (Sardinia, Italy).
 
 Repaint kit and other resources are available here: https://github.com/FGMEMBERS/Beechcraft-C18S
 
