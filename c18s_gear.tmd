@@ -1,0 +1,89 @@
+<[file][up][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // gear up
+            <[input_binary][GearInput][]
+                <[float64][Value][0.0]>
+            >
+            <[servoclassic][GearLever][]
+                <[float64][Position][0.0]>
+            >
+            <[event_edge_rising][GearLever_Sound][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearLever_Sound1][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_rising][GearSequence_Sound][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearSequence_Sound1][]
+                <[float64][Value][0.0]>
+            >
+            <[servolinear][ServoNoseGearSequence][]
+                <[float64][Position][0.0]>
+            >
+            <[servolinear][ServoLeftGearSequence][]
+                <[float64][Position][0.0]>
+            >
+            <[servolinear][ServoRightGearSequence][]
+                <[float64][Position][0.0]>
+            >
+            <[multibody_joint][JointFuselageNoseGearUpper][]
+                <[float64][Value][1.474]>
+            >
+            <[multibody_joint][JointFuselageLeftGear][]
+                <[float64][Value][-1.343]>
+            >
+            <[multibody_joint][JointFuselageRightGear][]
+                <[float64][Value][1.329]>
+            >
+        >
+    >
+>
+<[file][down][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // gear down
+            <[input_binary][GearInput][]
+                <[float64][Value][1.0]>
+            >
+            <[servoclassic][GearLever][]
+                <[float64][Position][1.0]>
+            >
+            <[event_edge_rising][GearLever_Sound][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_falling][GearLever_Sound1][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_rising][GearSequence_Sound][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_falling][GearSequence_Sound1][]
+                <[float64][Value][1.0]>
+            >
+            <[servolinear][ServoNoseGearSequence][]
+                <[float64][Position][1.0]>
+            >
+            <[servolinear][ServoLeftGearSequence][]
+                <[float64][Position][1.0]>
+            >
+            <[servolinear][ServoRightGearSequence][]
+                <[float64][Position][1.0]>
+            >
+            <[multibody_joint][JointFuselageNoseGearUpper][]
+                <[float64][Value][0.0]>
+            >
+            <[multibody_joint][JointFuselageLeftGear][]
+                <[float64][Value][0.0]>
+            >
+            <[multibody_joint][JointFuselageRightGear][]
+                <[float64][Value][0.0]>
+            >
+        >
+    >
+>
+

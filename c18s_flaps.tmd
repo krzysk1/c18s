@@ -1,0 +1,77 @@
+<[file][up][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps up
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0.0]>
+            >
+            <[electrical_actuator][Flaps][]
+                <[float64][Position][0.0]>
+            >
+
+            // trim
+            <[input_default][PitchTrim][]
+                <[float64][Value][0.232434373167804]>
+            >
+        >
+    >
+>
+<[file][takeoff][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps up
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0.0]>
+            >
+            <[electrical_actuator][Flaps][]
+                <[float64][Position][0.0]>
+            >
+
+            // trim
+            <[input_default][PitchTrim][]
+                <[float64][Value][-0.02]>
+            >
+        >
+    >
+>
+<[file][approach][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps approach
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0.5]>
+            >
+            <[electrical_actuator][Flaps][]
+                <[float64][Position][0.261799385771]>
+            >
+
+            // trim
+            <[input_default][PitchTrim][]
+                <[float64][Value][-0.1]>
+            >
+        >
+    >
+>
+<[file][landing][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps full
+            <[input_lever][FlapsInput][]
+                <[float64][Value][1.0]>
+            >
+            <[electrical_actuator][Flaps][]
+                <[float64][Position][0.523598771542]>
+            >
+
+            // trim
+            <[input_default][PitchTrim][]
+                <[float64][Value][-0.284887543786093]>
+            >
+        >
+    >
+>
+
