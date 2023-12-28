@@ -19,7 +19,4 @@
         <[uint][UnitsBuilt][9000]>
         <[uint][EngineCount][2]>        <[uint][Year][1937]>
         <[tmvector2d][FlapSettings][ (0.0 0.0) (0.5 0.349) (1.0 0.698) ]>
-        <[string8][FlapQualifier][]>
-        <[string8][Tags][ airplane historical piston flaps retractable_gear tailgear ]>        <[string8][Pilot][]>
-    >
->
+        <[string8][Tags][ airplane historical piston flaps retractable_gear tailgear ]>        <[string8][Pilot][pilot_jason]>    >>
