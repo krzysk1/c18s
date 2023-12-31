@@ -36,7 +36,7 @@
                 <[tmvector3d][R0][2.764 -0.333 0.484]>
                 <[tmvector3d][Direction][1.0 0.0 0.0]>
                 <[bool][InCockpit][true]>
-            >			
+            >
             <[camera][CameraNose][]
                 <[string8][Tags][nose]>
                 <[string8][Body][Fuselage]>
@@ -148,7 +148,7 @@
             <[multibody_joint][JointLeftWingLeftFuelTankBody][]
                 <[string8][Body0][LeftWing]>
                 <[string8][Body1][LeftFuelTankBody]>
-                <[tmvector3d][X0][0.0 0.0 1.0]>				
+                <[tmvector3d][X0][0.0 0.0 1.0]>
                 <[float64][Kp][1119000]>
                 <[float64][Kd][22380]>
                 <[tmvector3d][R0][ 1.756 3 -0.5 ]>
@@ -1018,7 +1018,7 @@
             >
             <[output_free][ServoThrottle1Output][]
                 <[string8][Input][ServoThrottle1.Output]>
-            >			
+            >
             <[servolinear][ServoEngineWork1][]
                 <[string8][Input][EngineInput.Output]>
                 <[float64][OutputSpeed][1.0]>
@@ -1072,7 +1072,7 @@
             >
             <[output_free][ThrustLeverMaximumOutput][]
                 <[string8][Input][ThrustLeverMaximum.Output]>
-            >			
+            >
             <[servoclassic][ServoMixture1][]
                 <[string8][Input][MixtureInput1.Output]>
                 <[float64][Speed][5.0]>
@@ -1489,7 +1489,7 @@
             >
             <[output][BalanceIndicatorDeflection][]
                 <[string8][Input][BalanceIndicator.Output]>
-            >			
+            >
             <[clock][Clock][]
             >
             <[output][UniversalTime][]
@@ -2820,14 +2820,14 @@
                 <[tmvector3d][Axis][ 0.0 1.0 0.0 ]>
                 <[tmvector3d][Pivot][3.47916 0.14636 -0.07287]>
             >
-			
+
             // pilot graphics
 
             // right hand transformation
             <[graphics_translation][RightHandTranslation][]
                 <[string8][Input][1]>
                 <[tmvector3d][Axis][ 0.04 0.12 0.0 ]>
-            >			
+            >
             <[graphics_input][ThrustLeverMaximum][]
                 <[string8][InputID][ThrustLeverMaximum.Output]>
             >
@@ -2839,7 +2839,7 @@
                 <[string8][Input][RightHandMainRotation.Output]>
                 <[tmvector3d][Axis][ 0.0 1.0 0.0 ]>
                 <[tmvector3d][Pivot][3.5 0 -0.2]>
-                <[string8][InputTransform][RightHandTranslation.Output]>	
+                <[string8][InputTransform][RightHandTranslation.Output]>
             >
             <[graphics_human][Pilot][]
                 <[string8][GeometryList][ PilotBody PilotHead ]>
