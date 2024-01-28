@@ -656,7 +656,7 @@
             >
             <[input_lever][ThrottleInput2][]
                 <[string8][Message][Controls.Throttle2]>
-            >
+            >		
             <[input_lever][MixtureInput1][]
                 <[tmvector2d][Range][ 0.0 1.0 ]>
                 <[uint][Positions][41]>
@@ -952,6 +952,11 @@
             <[output_free][ElevatorTrimInputOutput][]
                 <[string8][Input][ElevatorTrimInput.Output]>
             >
+            <[sender][SenderPitchTrimPosition][]
+                <[string8][Input][ElevatorTrimInput.Output]>
+                <[string8][Message][Aircraft.PitchTrim]>
+                <[string8][Qualifiers][ normalized ]>
+            >			
             <[mixlinear][MixElevatorTrim][]
                 <[string8][Input0][ElevatorInput.Output]>
                 <[string8][Input1][ElevatorTrimInput.Output]>
@@ -1029,16 +1034,6 @@
             <[output_free][ServoEngineWork1Output][]
                 <[string8][Input][ServoEngineWork1.Output]>
             >
-            <[servolinear][ThrottleCut1][]
-                <[string8][Input][ServoEngineWork1.Output]>
-                <[float64][OutputSpeed][0.5]>
-                <[float64][Position][0.0]>
-                <[float64array][InputPosition][ 0.4 0.5 ]>
-                <[float64array][OutputPosition][ 1.0 0.0 ]>
-            >
-            <[output_free][ThrottleCut1Output][]
-                <[string8][Input][ThrottleCut1.Output]>
-            >
             <[servoclassic][ServoThrottle2][]
                 <[string8][Input][ThrottleInput2.Output]>
                 <[float64][Speed][5]>
@@ -1056,16 +1051,6 @@
             >
             <[output_free][ServoEngineWork2Output][]
                 <[string8][Input][ServoEngineWork2.Output]>
-            >
-            <[servolinear][ThrottleCut2][]
-                <[string8][Input][ServoEngineWork2.Output]>
-                <[float64][OutputSpeed][0.5]>
-                <[float64][Position][0.0]>
-                <[float64array][InputPosition][ 0.4 0.5 ]>
-                <[float64array][OutputPosition][ 1.0 0.0 ]>
-            >
-            <[output_free][ThrottleCut2Output][]
-                <[string8][Input][ThrottleCut2.Output]>
             >
             <[maximum][ThrustLeverMaximum][]
                 <[string8][Inputs][ ServoThrottle1.Output ServoThrottle2.Output ]>
@@ -1280,7 +1265,7 @@
             >
 			// Pratt & Whitney R-985 Wasp Junior 450hp
             <[engine2][Engine1][]
-                <[string8][InputThrottle]    [ServoThrottle1.Output]>
+                <[string8][InputThrottle]    [ThrottleInput1.Output]>
                 <[string8][InputMixture]     [MixtureInput1.Output]>
                 <[string8][InputLeftMagneto] [1]>
                 <[string8][InputRightMagneto][1]>
@@ -1364,7 +1349,7 @@
                 <[float64][Friction][0.0]>
             >
             <[engine2][Engine2][]
-                <[string8][InputThrottle]    [ServoThrottle2.Output]>
+                <[string8][InputThrottle]    [ThrottleInput2.Output]>
                 <[string8][InputMixture]     [MixtureInput2.Output]>
                 <[string8][InputLeftMagneto] [1]>
                 <[string8][InputRightMagneto][1]>
@@ -1414,6 +1399,14 @@
             <[output][FuelFlow2][]
                 <[string8][Input][Engine2.FuelFlow]>
             >
+            <[product][NormalizedPropellerSpeed][]
+                <[string8][Inputs][ LeftDriveShaft.RotationSpeed 0.004347 ]>
+            >
+            <[sender][SenderPower][]
+                <[string8][Input][NormalizedPropellerSpeed.Output]>
+                <[string8][Message][Aircraft.Power]>
+            >
+
 
             // Instruments & outputs
 
@@ -1426,6 +1419,10 @@
             <[sender][SenderMach][]
                 <[string8][Input][PitotTube.MachNumber]>
                 <[string8][Message][Aircraft.MachNumber]>
+            >
+            <[sender][SenderAngleOfAttack][]
+                <[string8][Input][PitotTube.AngleOfAttack]>
+                <[string8][Message][Aircraft.AngleOfAttack]>
             >
             <[altimeter][Altimeter][]
                 <[string8][StaticPressure][PitotTube.StaticPressure]>

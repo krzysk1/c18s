@@ -37,10 +37,9 @@
 	             <[bool][AirBrake][true]>
            >
         >
+        <[int][EngineCount][2]>
+        <[bool][Piston][true]>		
         <[string8][AutoPilotType][BASIC]>
-        <[bool][Aerobatic][true]>
-        <[bool][Fighter][true]>
-        <[bool][FlyByWire][true]>
         <[bool][TailDragger][true]>
         <[bool][ParkingBrake][true]>
         <[string8][AutoThrottleType][MOVING]>
