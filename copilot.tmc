@@ -38,7 +38,8 @@
            >
         >
         <[int][EngineCount][2]>
-        <[bool][Piston][true]>		
+        <[bool][Piston][true]>
+        <[bool][GeneralAviation][true]>
         <[string8][AutoPilotType][BASIC]>
         <[bool][TailDragger][true]>
         <[bool][ParkingBrake][true]>
