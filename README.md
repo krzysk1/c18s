@@ -1,4 +1,7 @@
 # c18s
+
+**THE MODEL HAS NO DETAILED COCKPIT AND NO FURTHER DEVELOPMENT IS PLANNED**
+
 The Beechcraft Model 18 (or "Twin Beech", as it is also known) is a six to 11-seat, twin-engined, low-wing, tailwheel light aircraft manufactured by the Beech Aircraft Corporation of Wichita, Kansas. Continuously produced from 1937 to November 1969, (over 32 years, the world record at the time), over 9,000 were produced, making it one of the world's most widely used light aircraft. Sold worldwide as a civilian executive, utility, cargo aircraft, and passenger airliner on tailwheels, nosewheels, skis or floats, it was also used as a military aircraft. (From Wikipedia, the free encyclopedia)
 
 This is free add-on for AeroflyFS developed by Krzysztof Kaniewski, 2016 ver. 1.0.
